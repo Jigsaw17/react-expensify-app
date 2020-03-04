@@ -10,7 +10,7 @@ export const ExpeseListItem = ({ id, description, amount, createdAt}) => (
     </Link>
     <p> 
       {amount} 
-      - 
+      -
       {moment(createdAt).format('MMMM Do, YYYY')}
     </p>
   </div>
