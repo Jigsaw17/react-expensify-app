@@ -7,4 +7,5 @@
           "enzyme-to-json/serializer"
     ],
     "collectCoverage": true
-  }
+}
+
