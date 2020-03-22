@@ -39,7 +39,7 @@ test('should setup add expense action object with provided values', () => {
 
   
 test('should add expense to database and store', (done) => {
-    const store = createMockStore(defaultAuthState)
+    const store = createMockStore({})
     const expenseData = {
         description: 'Mouse',
         amount: 3000,
@@ -48,7 +48,8 @@ test('should add expense to database and store', (done) => {
     }
 
     store.dispatch(startAddExpense(expenseData)).then(() => {
-        const actions = store.getActions()
+        const actions = store.getActions();
+        //addExpense is the first action, hence the 0
         expect(actions[0]).toEqual({
             type: 'ADD_EXPENSE',
             expense: {
@@ -57,12 +58,13 @@ test('should add expense to database and store', (done) => {
             }
         })
 
-        return database.ref(`users/${uid}/expenses/${actions[0].expense.id}`).once('value')})
-            .then((snapshot) => {
+        return database.ref(`expenses/${actions[0].expense.id}`).once('value')
+        //This will get jest to wait until everything is finished; asynchronous processing 
+        }).then((snapshot) => {
             expect(snapshot.val()).toEqual(expenseData)
-            done()
-        })
-    })
+            done();
+        });
+    });
   
 
 
@@ -88,7 +90,7 @@ test('should add expense to database and store', (done) => {
       }).then((snapshot) => {
           expect(snapshot.val()).toEqual(expenseDefaults)
           done();
-    });
+    },);
 });
 
 
