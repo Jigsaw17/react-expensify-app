@@ -42,6 +42,11 @@ export { firebase, database as default };
 //   console.log(snapshot.key, snapshot.val());
 // })
 
+
+
+
+///////<===== parse data =>////////////////////
+
 // database.ref('expenses')
 //    .once('value')
 //    .then((snapshot) => {
@@ -68,6 +73,13 @@ export { firebase, database as default };
 //     });
 //       console.log(expenses)
 // })
+
+
+
+
+
+
+
 
 // database.ref('expenses').push({
 //   description: 'PS5',
