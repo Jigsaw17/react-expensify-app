@@ -42,7 +42,7 @@
     "style-loader": "0.18.2",
     "uuid": "^3.4.0",
     "validator": "8.0.0",
-    "webpack": "^4.42.0",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
   "devDependencies": {

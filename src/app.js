@@ -8,7 +8,9 @@ import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
-import './firebase/firebase';
+import { firebase } from './firebase/firebase';
+import './components/LoginPage';
+
 
 
 
@@ -29,3 +31,10 @@ store.dispatch(startSetExpenses()).then(() => {
 });
 
 
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    console.log('Log out')
+  } else {
+    console.log('Log in')
+  }
+});
