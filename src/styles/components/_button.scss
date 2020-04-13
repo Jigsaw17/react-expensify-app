@@ -1,0 +1,84 @@
+.button_container {
+    display: -ms-grid;
+    display: grid;
+   grid-row-gap: 1.5rem;
+};
+
+#google__icon {
+    display: inline-block;
+    text-indent: -35rem;
+    font-family: $login-page-font;
+    font-weight: bold;
+    &::after {
+      content: " Google";
+      display: inline;
+      padding: 0 0 0 0.6rem;
+    }
+};
+
+
+#facebook__icon {
+    display: inline-block;
+    text-indent: -33rem;
+    font-family: $login-page-font;
+    font-weight: bold;
+    &::after {
+      content: " Facebook";
+      display: inline;
+      padding: 0 0 0 0.6rem;
+    }
+};
+
+
+#phone_number__icon {
+    display: inline-block;
+    text-indent: -29rem;
+    font-family: $login-page-font;
+    font-weight: bold;
+    &::after {
+      content: " Phone Number";
+      display: inline;
+      padding: 0 0 0 0.6rem;
+    }
+};
+
+
+.buttons__nav {
+    border-radius: $l-size;
+    padding: 1.9rem 4rem 1.9rem 17.9rem;
+    background: $-white;
+    color: #43525d;
+    margin: 0 5.3rem;
+    border: none;
+    &:hover {
+        border-style: solid;
+        border-color: #19B5FE;
+    }
+};
+
+
+#concierge__expensify {
+    padding: 30rem 0 0 8.2rem;
+    color:$-white;
+    &::after {
+      content: ' Concierge';
+      padding: 0 0 0 0.6rem;
+      font-weight: bold;
+    }
+};
+
+
+#welcome__expensify {
+    padding: 0 0 1rem 7rem;
+    color:$-white;
+    font-family: $login-page-font;
+    font-weight: bold;
+};
+
+#link__expensify {
+    padding: 20rem 0 0 9rem;
+    color:$-white;
+    font-family: $login-page-font;
+    font-size: 1.2rem;
+};
+

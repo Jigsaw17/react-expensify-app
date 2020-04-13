@@ -2,6 +2,9 @@ import React from 'react';
 import ExpenseList from './ExpenseList'
 import ExpsenListFilters from './ExpenseListFilters';
 import ExpenseSummary from './ExpenseSummary';
+import Menu from './Menu';
+
+
 
 
 const ExpenseDashboardPage = () => (
@@ -9,7 +12,7 @@ const ExpenseDashboardPage = () => (
     <ExpenseSummary />
     <ExpsenListFilters />
     <ExpenseList />
-  </div>
+    </div>
 );
 
 export default ExpenseDashboardPage;

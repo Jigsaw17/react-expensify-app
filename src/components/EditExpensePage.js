@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm'
 import { startEditExpense, startRemoveExpense } from '../actions/expenses'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+
 
 
 
@@ -16,12 +19,15 @@ export class EditExpensePage extends React.Component {
   };
 render() {
   return (
-    <div>
+      <div>
+       <div className="content-container">
+        <h1>Edit Expense</h1>
       <ExpenseForm 
-      expense={this.props.expense}
-      onSubmit={this.onSubmit}
+        expense={this.props.expense}
+        onSubmit={this.onSubmit}
       />
-      <button onClick={this.onRemove}>Remove</button>
+          <button className="delete_button" onClick={this.onRemove}><FontAwesomeIcon icon={faTrash} color="white" size="2x"/></button>
+      </div>
     </div>
    );
   };

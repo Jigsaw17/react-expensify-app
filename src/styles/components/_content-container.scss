@@ -1,0 +1,43 @@
+@media(min-width: $desktop-breakpoint) {
+  .container__content_page {
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+     grid-template-rows: 75rem;
+  }
+}
+
+#user__icon {
+   padding: 10px 0 0 33rem;
+   @media(min-width: $desktop-breakpoint) {
+    padding: 10px 0 0 6.5rem;
+   }
+}
+
+
+
+.box-content__title {
+    width: 0;
+    padding: 0;
+    @media(min-width: $desktop-breakpoint) {
+    width: 20rem;
+    padding: 530px 0 0 0;
+    }
+ }
+
+
+.box_content__left__container {
+    background-color:#43525d;
+    grid-column: 1 / 1;
+};
+
+.box_content__right__container  {
+    grid-column: 2 / 8; 
+};
+
+
+.content-container {
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: 0 $m-size; 
+};
+

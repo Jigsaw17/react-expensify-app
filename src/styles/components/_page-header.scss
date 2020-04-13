@@ -1,0 +1,46 @@
+.page-header {
+  background: #f7f7f7;
+  margin-bottom: $l-size;
+  padding: $l-size 0;
+}
+
+
+.page-header__title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  margin: 0%;
+  .expenses_summary {
+   font-weight: 700;
+  };
+}; 
+
+
+.button {
+    background: #5bd98a;
+    border: none;
+    color: $-white;
+    display: inline-block;
+    font-size: $font-size-large;
+    font-weight: bold;
+    line-height: 1;
+    padding: $s-size;
+    text-decoration: none; 
+    border-radius: 5px;
+}
+
+.delete_button {
+  @extend .button;
+  background: #ff3b48;
+  
+}
+
+.delete_align {
+  display: row;
+  justify-content: space-between;
+};
+
+
+#expense__button {
+  padding: 50px 0 0 1150px;
+  margin:  0;
+};

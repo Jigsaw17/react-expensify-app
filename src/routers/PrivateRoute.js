@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 import Header from '../components/Header';
 
-
 export const PublicRoute = ({
     isAuthenticated,
     component: Component,
@@ -11,10 +10,14 @@ export const PublicRoute = ({
 }) => (
     <Route {...rest} component={(props) => (
         isAuthenticated ? (
-            <div>
+        <div className="container__content_page">
+          <div className="box_content__left__container">
             <Header />
+          </div>
+          <div className="box_content__right__container">
             <Component {...props} />
-            </div>
+           </div>
+          </div>
         ) : (
             <Redirect to="/" /> 
         )
@@ -26,3 +29,4 @@ const mapStateToProps = (props) => ({
 })
 
 export default connect(mapStateToProps)(PublicRoute)
+
