@@ -12,10 +12,9 @@ const config = {
   };
   // Initialize Firebase
   firebase.initializeApp(config);
-  const database = firebase.database();
+  const database = firebase.database();``
   const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-   
   googleAuthProvider.setCustomParameters({
     prompt: 'select_account'
   })
